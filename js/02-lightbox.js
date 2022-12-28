@@ -28,25 +28,11 @@ function createMarkup(arr) {
 }
  createMarkup(galleryItems);
 
- divEl.addEventListener('click',showImg);
-
-function showImg(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
-    return
-  }
-}
-    let instance = new SimpleLightbox('.gallery a', {
+  new SimpleLightbox('.gallery a', {
       captionsData: 'alt',
       captionDelay: 250,
     });
-    instance.on('show.simplelightbox', function () { });
-
-    function onEscape(event) {
-      if (event.code === 'Escape') {
-        instance.close();
-      }
-    }
+    
   
 
 
